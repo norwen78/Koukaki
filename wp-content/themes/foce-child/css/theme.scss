@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+body{
+  height: 100% !important;
+}
+
+
+section {
+    opacity: 0;
+    animation: fade-in 1.5s ease-in forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.banner {
+    background-image: none !important;
+    .background-fallback{
+      display: none;
+    }
+    .background-video {
+        z-index: -1;
+        width: 100% !important;
+        max-width: 1440px;
+        height: 806px;
+        object-fit: cover;
+        position: absolute;
+        animation:  descendVideo 1.5s ease-in-out forwards;
+    }
+    .banner-logo{
+        position: absolute;
+        animation: ascendLogo 1.5s ease-in-out forwards;
+        animation: floatTitle 1.5s ease-in-out infinite;
+        max-width: 680px;
+        max-height: 479px;
+    }
+
+}
+
+@keyframes floatTitle {
+  0%{
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+
+@keyframes ascendLogo {
+    0% {
+      bottom: 20%;
+    }
+    100% {
+      bottom: 36%;
+    }
+  }
+
+  @media screen and (max-width:1440px){
+
+    @keyframes ascendLogo {
+        0% {
+          bottom: 20%;
+        }
+        100% {
+          bottom: 50%;
+        }
+      }
+  }
+
+@keyframes descendVideo {
+    0% {
+      top: -20%;
+    }
+    100% {
+      top: 80px;
+    }
+  }
+
+
+.story{
+  margin-top: 8%;
+}
+
+
+.story__article::after,.story h2::after,#studio h2::before,#studio h2::after,.site-footer ul::after,.sunflower-nomination,.orchid-nomination,.anim-1,.anim-3,.anim-5,.anim-6,.anim-8  {
+  animation: rotate 6s linear infinite;
+}
+.site-footer::after,.site-footer::before {
+  display: none;
+}
+#studio h2::before{
+  transform-origin: 101.5px 101.5px;
+}
+#studio h2::after{
+  transform-origin: 54.5px 54.5px;
+}
+.story h2::after{
+  transform-origin: 77px 77px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+#place{
+  background-image: url(../assets/image/Studio_Koukaki-image_place.png) !important;
+  position: relative;
+  overflow: hidden;
+  .nuages-anim{
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    .gros-nuage{
+     position: absolute;
+      top: 10%;
+      filter: blur(12px);
+    }
+    .petit-nuage{
+      position: absolute;
+      top: 38%;
+      filter: blur(7px);
+    }
+}
+}
+#characters{
+display: flex;
+flex-direction: column;
+.personnages{
+  display: flex;
+  flex-direction: row;
+}
+}
+#nomination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    .orchid-nomination{
+      position: absolute;
+      top: 3%;
+      right: -6.5%;
+      overflow: hidden !important;
+    }
+    .sunflower-nomination{
+      position: absolute;
+      left: 9%;
+      top: 10%;
+    }
+    .nomination-div{
+      margin-top: 10%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        max-width: 1440px;
+        .nomination-div-p{
+            max-width: 643px;
+            font-size: 40px;   
+            line-height: 52px;
+            font-weight: 700;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
+            text-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+        }
+        .nomination-div-p-background{
+            z-index: -1;
+            position: absolute;
+            left: 13%;
+        }
+    }
+}
+
+.menu-bar {
+  background-color: rgba(255, 213, 162, 1);
+  height: 80px;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  top: 0px;
+  position: fixed;
+  z-index: 2;
+  .logo {
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  .burger-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    .bar {
+      height: 4px;
+      width: 30px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+  }
+}
+
+.fullscreen-menu {
+  display: none;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 245, 233, 1);
+  text-align: center;
+  .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+}
+
+.top-bar{
+  width: 100%;
+  height: 80px;
+  background-color: #FFD5A2;
+  text-align: center;
+  .burger-croix {
+    margin-right: 13%;
+  }
+  .title-top-bar{
+    font-size: 22px;
+    font-weight: 700;
+    background-image: none;
+    color: black;
+    background-color: transparent;
+  }
+}
+
+.logo-burger{
+  margin-top: 2%;
+}
+.animation-burger{
+  position: absolute;
+}
+
+.anim-1{
+  height: 168px;
+  width: 172px;
+  top: 15%;
+  left: -2.8%;
+}
+.anim-2{
+  width: 109px;
+  height: 98px;
+  top: 24%;
+  left: 20%;
+  animation: floatTitle 2s ease-in-out infinite;
+}
+
+.anim-3{
+  width: 70px;
+  height: 70px;
+  top: 55%;
+  left: 15%;
+}
+
+.anim-4{
+  width: 105px;
+  height: 95px;
+  bottom: 10%;
+  left: 10%;
+  animation: floatTitle 2s ease-in-out infinite;
+}
+
+.anim-5{
+  width: 216px;
+  height: 216px;
+  right: 20%;
+  top: 24%;
+}
+
+.anim-6{
+  width: 75px;
+  height: 75px;
+  top: 47%;
+  right: -1%;
+}
+
+.anim-7{
+  width: 154px;
+  height: 147px;
+  right: 15%;
+  top: 55%;
+  animation: floatTitle 2s ease-in-out infinite;
+}
+
+.anim-8{
+  width: 626px;
+  height: 626px;
+  bottom: -35%;
+  right: -15%;
+}
+
+.menu-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  
+}
+.menu-content ul li {
+  margin-top: 2%;
+}
+.menu-content a {
+  text-decoration: none;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 85px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.menu-content a:hover {
+  text-shadow: 2px 2px 14px rgba(255, 92, 0, 1);
+}
+
+.trademark-koukaki{
+  margin-top: 9%;
+}
+
+@media screen and (max-width:1440px){
+.anim-8{
+  bottom: -40%;
+  right: -23%;
+}
+#nomination{
+    overflow: hidden;
+    .nomination-div{
+      .nomination-div-p-background{
+      z-index: -1;
+      position: absolute;
+      left: 12.5%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1024px){
+  .anim-5{
+    right: 10%;
+    width: 108px;
+    height: 108px;
+  }
+  .anim-7{
+    right: 3%;
+  }
+  .anim-8{
+    width: 313px;
+    height: 313px;
+    right: -15%;
+    bottom: -18%;
+  }
+  .trademark-koukaki{
+    margin-top: 18% !important;
+  }
+  .nuages-anim{
+   left: 9% !important;
+  }
+  #nomination{
+    overflow: hidden;
+    .sunflower-nomination{
+      top: -1%;
+    }
+    .nomination-div{
+      .nomination-div-p-background{
+      z-index: -1;
+      position: absolute;
+      left: -1.5%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px){
+  .anim-1{
+    height: 80px;
+    width: 80px;
+  }
+  .anim-2{
+    width: 54.5px;
+    height: 49px;
+    animation: none;
+  }
+  .anim-4{
+    animation: none;
+  }
+  .anim-6{
+    width: 50px;
+    height: 50px;
+  }
+  .anim-7{
+    width: 77px;
+    height: 73.5px;
+    animation: none;
+  }
+  .anim-8{
+    right: -20%;
+  }
+  .story__article::after,.story h2::after,#studio h2::before,#studio h2::after,.sunflower-nomination,.orchid-nomination,.anim-1,.anim-3,.anim-5,.anim-6  {
+    animation: none;
+  }
+  #story{
+    margin-top: 12%;
+  }
+  #characters{
+    margin: 0 !important;
+  }
+  .menu-bar{
+    max-width: 768px !important;
+  }
+  .nuages-anim{
+   display: none;
+   .petit-nuage{
+    display: none;
+   }
+   .gros-nuage{
+    display: none;
+   }
+  }
+  #studio h2::before{
+    display: none;
+  }
+  .sunflower-nomination{
+    width: 77px;
+    height: 77.5px;
+  }
+  .orchid-nomination{
+    width: 84.5px;
+    height: 86.5px;
+    right: 0% !important;
+  }
+  .nomination-div{
+    flex-direction: column;
+  }
+  .trademark-koukaki{
+    margin-top: 26% !important;
+  }
+  .background-fallback{
+    display: block !important;
+  }
+  .background-video{
+    display: none;
+  }
+  .banner img {
+    width: 65%;
+  }
+
+  }
+
+  @media screen and (max-width:425px){
+    .menu-content a{
+      font-size: 32px;
+    }
+    .title-top-bar{
+      padding-left: 0%;
+      font-size: 20px;
+    }
+    .menu-bar .burger-icon .bar {
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+  }
+    .burger-croix{
+      margin-right: 0% !important;
+    }
+    .anim-4{
+      left: 0%;
+      bottom: 20%;
+    }
+    .anim-2,.anim-3,.anim-5{
+      display: none;
+    }
+    .anim-6{
+      top: 20%;
+    }
+    .anim-7{
+      top: 50%;
+    }
+    .anim-8{
+      right: -38%;
+    }
+    .banner img {
+      width: 85%;
+    }
+  .story #characters h3{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 2rem;
+  }
+  .nomination-div-p{
+    line-height: 25px !important;
+    margin-top: 30px !important;
+    font-size: 1.5rem !important;
+    max-width: 300px !important;
+  }
+  }
+
+  @media screen and (max-width:375px){
+    .menu-bar{
+      padding: 20px;
+      max-width: 375px !important;
+    }
+    .title-top-bar{
+      padding-top: 12px !important;
+    }
+    #characters div{
+      max-width: 375px;
+    }
+    .nomination-div-p{
+      z-index: 1;
+      font-size: 1.2rem !important;
+      max-width: 300px !important;
+    }
+  }
+
+  @media screen and (max-width:320px){
+    .menu-bar{
+      max-width: 320px !important;
+    }
+    .top-bar .title-top-bar {
+      font-size: 18px;
+    }
+    .menu-bar .logo {
+      max-width: 220px;
+    }
+    #story{
+      margin-top: 15%;
+    }
+    #characters div{
+      max-width: 320px;
+    }
+    #characters h3{
+      font-size: 1.8rem !important;
+    }
+    h3{
+      font-size: 2.3rem;
+    }
+    .nomination-div-p {
+      font-size: 1rem !important;
+      max-width: 250px !important;
+      margin-top: 20px !important;
+  }
+    .sunflower-nomination{
+      display: none;
+    }
+    .anim-4{
+      display: none;
+    }
+
+  }
